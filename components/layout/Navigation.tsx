@@ -35,7 +35,7 @@ export function Navigation() {
         <a href="#" className="flex items-center gap-2.5" data-cursor-hover>
           <Scale size={22} className="text-gold-600" strokeWidth={1.5} />
           <span className="font-display text-lg tracking-tight text-primary dark:text-paper">
-            Advokatska Kancelarija
+            Адвокатска канцеларија
           </span>
         </a>
 
@@ -56,7 +56,7 @@ export function Navigation() {
         <div className="hidden items-center gap-4 lg:flex">
           <ThemeToggle />
           <a href="#contact" data-cursor-hover className={buttonVariants({ variant: 'gold', size: 'sm' })}>
-            Zakažite konsultacije
+            Закажите консултације
           </a>
         </div>
 
@@ -114,7 +114,7 @@ export function Navigation() {
                 onClick={() => setIsMenuOpen(false)}
                 className={buttonVariants({ variant: 'gold', size: 'lg', className: 'w-full' })}
               >
-                Zakažite konsultacije
+                Закажите консултације
               </a>
             </div>
           </motion.div>
