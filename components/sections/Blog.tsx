@@ -9,15 +9,19 @@ import { blogPosts } from '@/lib/data';
 
 export function Blog() {
   const categories = useMemo(
-    () => ['Sve', ...Array.from(new Set(blogPosts.map((p) => p.category)))],
+    () => ['Све', ...Array.from(new Set(blogPosts.map((p) => p.category)))],
     []
   );
-  const [activeCategory, setActiveCategory] = useState('Sve');
+
+  const [activeCategory, setActiveCategory] = useState('Све');
 
   const featured = blogPosts.find((p) => p.featured);
   const rest = blogPosts.filter((p) => !p.featured);
+
   const filtered =
-    activeCategory === 'Sve' ? rest : rest.filter((p) => p.category === activeCategory);
+    activeCategory === 'Све'
+      ? rest
+      : rest.filter((p) => p.category === activeCategory);
 
   return (
     <section id="blog" className="bg-accent py-28 dark:bg-primary-700 sm:py-36">
@@ -25,11 +29,12 @@ export function Blog() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <span className="eyebrow-rule text-xs uppercase tracking-[0.25em] text-gold-700 dark:text-gold-300">
-              Pravni saveti
+              Правни савети
             </span>
+
             <RevealText
               as="h2"
-              text="Uvidi koji vam pomažu da donosite informisane odluke."
+              text="Увиди који вам помажу да доносите информисане одлуке."
               className="mt-6 max-w-xl font-display text-3xl leading-[1.15] text-primary balance dark:text-paper sm:text-4xl"
             />
           </div>
@@ -62,31 +67,39 @@ export function Blog() {
             className="group mt-14 grid grid-cols-1 gap-8 border-b border-primary/10 pb-14 dark:border-paper/10 lg:grid-cols-[1.1fr_1fr] lg:items-center"
           >
             <div className="relative aspect-[16/10] overflow-hidden rounded-sm">
-  <Image
-    src={featured.image}
-    alt={featured.title}
-    fill
-    className="object-cover"
-  />
-</div>
+              <Image
+                src={featured.image}
+                alt={featured.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+
             <div>
               <span className="text-xs uppercase tracking-[0.2em] text-gold-700 dark:text-gold-300">
-                Izdvojeno · {featured.category}
+                Издвојено · {featured.category}
               </span>
+
               <h3 className="mt-4 font-display text-2xl leading-snug text-primary balance dark:text-paper sm:text-3xl">
                 {featured.title}
               </h3>
+
               <p className="mt-4 max-w-lg text-sm leading-relaxed text-primary/60 dark:text-paper/60">
                 {featured.excerpt}
               </p>
+
               <div className="mt-6 flex items-center gap-4 text-xs text-primary/45 dark:text-paper/45">
                 <span>{featured.date}</span>
                 <span>·</span>
                 <span>{featured.readTime}</span>
               </div>
+
               <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors group-hover:text-gold-700 dark:text-paper dark:group-hover:text-gold-200">
-                Pročitajte članak
-                <ArrowRight size={15} className="transition-transform duration-300 group-hover:translate-x-1" />
+                Прочитајте чланак
+                <ArrowRight
+                  size={15}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
               </span>
             </div>
           </motion.a>
@@ -105,13 +118,14 @@ export function Blog() {
               className="group flex flex-col"
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
-  <Image
-    src={post.image}
-    alt={post.title}
-    fill
-    className="object-cover transition-transform duration-700 group-hover:scale-105"
-  />
-</div>
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+
               <span className="mt-5 text-xs uppercase tracking-[0.2em] text-gold-700 dark:text-gold-300">
                 {post.category}
               </span>
@@ -119,7 +133,11 @@ export function Blog() {
               <h3 className="mt-2 font-display text-lg leading-snug text-primary balance dark:text-paper">
                 {post.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-primary/55 dark:text-paper/55">{post.excerpt}</p>
+
+              <p className="mt-2 text-sm leading-relaxed text-primary/55 dark:text-paper/55">
+                {post.excerpt}
+              </p>
+
               <div className="mt-4 flex items-center gap-3 text-xs text-primary/40 dark:text-paper/40">
                 <span>{post.date}</span>
                 <span>·</span>
