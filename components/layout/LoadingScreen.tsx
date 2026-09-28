@@ -33,7 +33,7 @@ export function LoadingScreen() {
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-2xl text-paper sm:text-3xl"
           >
-            Advokatska Kancelarija Savić
+            Адвокатска Канцеларија Савић
           </motion.span>
           <div className="mt-8 h-px w-40 overflow-hidden bg-paper/15">
             <motion.div
