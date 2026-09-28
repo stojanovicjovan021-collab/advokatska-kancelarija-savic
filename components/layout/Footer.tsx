@@ -10,10 +10,12 @@ export function Footer() {
         <div className="sm:col-span-2 lg:col-span-1">
           <a href="#" className="flex items-center gap-2.5">
             <Scale size={22} className="text-gold-300" strokeWidth={1.5} />
-            <span className="font-display text-lg">Advokatska Kancelarija</span>
+            <span className="font-display text-lg">Адвокатска канцеларија</span>
           </a>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-paper/55">
-            Pravna sigurnost zasnovana na znanju, iskustvu i poverenju — za fizička i pravna lica širom Srbije.
+             Правна сигурност заснована на знању,
+  искуству и поверењу — за физичка и
+  правна лица широм Србије.
           </p>
         </div>
 
@@ -56,13 +58,13 @@ export function Footer() {
 
       <div className="border-t border-paper/10">
         <div className="container-luxury flex flex-col items-center justify-between gap-4 py-8 text-xs text-paper/40 sm:flex-row">
-          <p>© {year} Advokatska Kancelarija. Sva prava zadržana.</p>
+          <p>© {year} Адвокатска канцеларија. Сва права задржана.</p>
           <div className="flex gap-6">
             <a href="#" className="transition-colors hover:text-gold-200">
-              Politika privatnosti
+              Политика приватности
             </a>
             <a href="#" className="transition-colors hover:text-gold-200">
-              Uslovi korišćenja
+              Услови коришћења
             </a>
           </div>
         </div>
