@@ -24,6 +24,8 @@ export interface BlogPost {
   date: string;
   readTime: string;
   featured?: boolean;
+image: string;
+content: string;
 }
 
 export interface FAQItem {
