@@ -15,17 +15,17 @@ export function PracticeAreas() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <span className="eyebrow-rule text-xs uppercase tracking-[0.25em] text-gold-700 dark:text-gold-300">
-              Oblasti prava
+              Области права
             </span>
             <RevealText
               as="h2"
-              text="Sveobuhvatna pravna podrška iz jednog izvora."
+              text="Свеобухватна правна подршка из једног извора."
               className="mt-6 max-w-xl font-display text-3xl leading-[1.15] text-primary balance dark:text-paper sm:text-4xl"
             />
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-primary/55 dark:text-paper/55">
-            Dvanaest oblasti prava u kojima naš tim redovno zastupa fizička i pravna lica, od savetovanja do
-            zastupanja pred sudom.
+            Дванаест области права у којима наш тим редовно заступа физичка и правна лица, од саветовања до
+            заступања пред судом.
           </p>
         </div>
 
