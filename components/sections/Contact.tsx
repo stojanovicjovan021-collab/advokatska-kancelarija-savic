@@ -24,9 +24,16 @@ export function Contact() {
 
   function validate(): boolean {
     const nextErrors: Partial<FormState> = {};
-    if (form.name.trim().length < 2) nextErrors.name = 'Unesite vaše puno ime.';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) nextErrors.email = 'Unesite ispravnu email adresu.';
-    if (form.message.trim().length < 10) nextErrors.message = 'Opišite ukratko vaš slučaj (min. 10 karaktera).';
+
+    if (form.name.trim().length < 2)
+      nextErrors.name = 'Унесите ваше пуно име.';
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+      nextErrors.email = 'Унесите исправну имејл адресу.';
+
+    if (form.message.trim().length < 10)
+      nextErrors.message = 'Опишите укратко ваш случај (мин. 10 карактера).';
+
     setErrors(nextErrors);
     return Object.keys(nextErrors).length === 0;
   }
@@ -34,8 +41,9 @@ export function Contact() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!validate()) return;
+
     setStatus('submitting');
-    // Simulated submission — replace with a real API route or email service.
+
     setTimeout(() => {
       setStatus('success');
       setForm(initialState);
@@ -47,10 +55,14 @@ export function Contact() {
   return (
     <section id="contact" className="bg-ink py-28 text-paper sm:py-36">
       <div className="container-luxury">
-        <span className="eyebrow-rule text-xs uppercase tracking-[0.25em] text-gold-300">Kontakt</span>
+
+        <span className="eyebrow-rule text-xs uppercase tracking-[0.25em] text-gold-300">
+          Контакт
+        </span>
+
         <RevealText
           as="h2"
-          text="Zakažite konsultacije i razgovarajmo o vašem slučaju."
+          text="Закажите консултације и разговарајмо о вашем случају."
           className="mt-6 max-w-2xl font-display text-3xl leading-[1.15] text-paper balance sm:text-4xl"
         />
 
@@ -69,17 +81,22 @@ export function Contact() {
                     <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold text-ink">
                       <Check size={18} />
                     </span>
+
                     <div>
-                      <h3 className="font-display text-xl text-paper">Poruka je uspešno poslata</h3>
+                      <h3 className="font-display text-xl text-paper">
+                        Порука је успешно послата
+                      </h3>
+
                       <p className="mt-2 text-sm text-paper/60">
-                        Naš tim će vam odgovoriti u toku narednog radnog dana.
+                        Наш тим ће вам одговорити у току наредног радног дана.
                       </p>
                     </div>
+
                     <button
                       onClick={() => setStatus('idle')}
                       className="text-sm text-gold-200 underline underline-offset-4"
                     >
-                      Pošaljite još jednu poruku
+                      Пошаљите још једну поруку
                     </button>
                   </motion.div>
                 ) : (
@@ -94,23 +111,25 @@ export function Contact() {
                   >
                     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                       <FloatingField
-                        label="Ime i prezime"
+                        label="Име и презиме"
                         name="name"
                         required
                         value={form.name}
                         onChange={(v) => setForm((f) => ({ ...f, name: v }))}
                         error={errors.name}
                       />
+
                       <FloatingField
-                        label="Telefon"
+                        label="Телефон"
                         name="phone"
                         type="tel"
                         value={form.phone}
                         onChange={(v) => setForm((f) => ({ ...f, phone: v }))}
                       />
                     </div>
+
                     <FloatingField
-                      label="Email adresa"
+                      label="Имејл адреса"
                       name="email"
                       type="email"
                       required
@@ -118,8 +137,9 @@ export function Contact() {
                       onChange={(v) => setForm((f) => ({ ...f, email: v }))}
                       error={errors.email}
                     />
+
                     <FloatingField
-                      label="Opišite vaš slučaj"
+                      label="Опишите ваш случај"
                       name="message"
                       as="textarea"
                       required
@@ -127,12 +147,19 @@ export function Contact() {
                       onChange={(v) => setForm((f) => ({ ...f, message: v }))}
                       error={errors.message}
                     />
+
                     <button
                       type="submit"
                       disabled={status === 'submitting'}
-                      className={buttonVariants({ variant: 'gold', size: 'lg', className: 'w-full sm:w-auto' })}
+                      className={buttonVariants({
+                        variant: 'gold',
+                        size: 'lg',
+                        className: 'w-full sm:w-auto',
+                      })}
                     >
-                      {status === 'submitting' ? 'Slanje u toku…' : 'Pošaljite poruku'}
+                      {status === 'submitting'
+                        ? 'Слање у току…'
+                        : 'Пошаљите поруку'}
                     </button>
                   </motion.form>
                 )}
@@ -143,33 +170,63 @@ export function Contact() {
           <div className="flex flex-col gap-8">
             <div className="overflow-hidden rounded-sm border border-paper/10">
               <iframe
-                title="Lokacija advokatske kancelarije"
+                title="Локација адвокатске канцеларије"
                 src={mapSrc}
                 className="h-64 w-full grayscale invert-[0.92] contrast-[1.1] sm:h-80"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
+
             <ul className="space-y-6">
               <li className="flex items-start gap-4">
-                <MapPin size={20} className="mt-0.5 shrink-0 text-gold-300" strokeWidth={1.5} />
-                <span className="text-sm leading-relaxed text-paper/70">{contactInfo.address}</span>
+                <MapPin
+                  size={20}
+                  className="mt-0.5 shrink-0 text-gold-300"
+                  strokeWidth={1.5}
+                />
+                <span className="text-sm leading-relaxed text-paper/70">
+                  {contactInfo.address}
+                </span>
               </li>
+
               <li className="flex items-start gap-4">
-                <Phone size={20} className="mt-0.5 shrink-0 text-gold-300" strokeWidth={1.5} />
-                <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="text-sm text-paper/70 hover:text-gold-200">
+                <Phone
+                  size={20}
+                  className="mt-0.5 shrink-0 text-gold-300"
+                  strokeWidth={1.5}
+                />
+                <a
+                  href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
+                  className="text-sm text-paper/70 hover:text-gold-200"
+                >
                   {contactInfo.phone}
                 </a>
               </li>
+
               <li className="flex items-start gap-4">
-                <Mail size={20} className="mt-0.5 shrink-0 text-gold-300" strokeWidth={1.5} />
-                <a href={`mailto:${contactInfo.email}`} className="text-sm text-paper/70 hover:text-gold-200">
+                <Mail
+                  size={20}
+                  className="mt-0.5 shrink-0 text-gold-300"
+                  strokeWidth={1.5}
+                />
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="text-sm text-paper/70 hover:text-gold-200"
+                >
                   {contactInfo.email}
                 </a>
               </li>
+
               <li className="flex items-start gap-4">
-                <Clock size={20} className="mt-0.5 shrink-0 text-gold-300" strokeWidth={1.5} />
-                <span className="text-sm leading-relaxed text-paper/70">{contactInfo.workingHours}</span>
+                <Clock
+                  size={20}
+                  className="mt-0.5 shrink-0 text-gold-300"
+                  strokeWidth={1.5}
+                />
+                <span className="text-sm leading-relaxed text-paper/70">
+                  {contactInfo.workingHours}
+                </span>
               </li>
             </ul>
           </div>
