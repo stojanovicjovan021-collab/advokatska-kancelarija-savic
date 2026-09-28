@@ -27,6 +27,8 @@ export function Testimonials() {
 
   const current = testimonials[index];
 
+if (!current) return null;
+
   return (
     <section
       id="testimonials"
