@@ -1,220 +1,193 @@
-import {
-  Scale,
-  Building2,
-  Landmark,
-  Receipt,
-  Home,
-  Undo2,
-  FileText,
-  Gavel,
-  Briefcase,
-  FileSignature,
-  ShieldAlert,
-  Handshake,
-  Users,
-  Lock,
-  Clock,
-  Brain,
-  MessageSquare,
-} from 'lucide-react';
-import type {
-  PracticeArea,
-  Testimonial,
-  BlogPost,
-  FAQItem,
-  ProcessStep,
-  ValueItem,
-  DifferentiatorItem,
-} from '@/types';
-
 export const practiceAreas: PracticeArea[] = [
   {
     id: 'gradjansko-pravo',
-    title: 'Građansko pravo',
-    shortDescription: 'Zaštita imovinskih i ličnih prava fizičkih lica.',
+    title: 'Грађанско право',
+    shortDescription: 'Заштита имовинских и личних права физичких лица.',
     longDescription:
-      'Zastupamo klijente u parničnim i vanparničnim postupcima, sporovima oko svojine, nasleđivanja i ličnih prava, uz strategiju prilagođenu svakom predmetu.',
+      'Заступамо клијенте у парничним и ванпарничним поступцима, споровима око својине, наслеђивања и личних права, уз стратегију прилагођену сваком предмету.',
     icon: Scale,
   },
   {
     id: 'privredno-pravo',
-    title: 'Privredno pravo',
-    shortDescription: 'Pravna podrška privrednim društvima u svim fazama poslovanja.',
+    title: 'Привредно право',
+    shortDescription: 'Правна подршка привредним друштвима у свим фазама пословања.',
     longDescription:
-      'Savetujemo privredna društva pri osnivanju, statusnim promenama, korporativnom upravljanju i privrednim sporovima pred nadležnim sudovima i arbitražama.',
+      'Саветујемо привредна друштва при оснивању, статусним променама, корпоративном управљању и привредним споровима пред надлежним судовима и арбитражама.',
     icon: Building2,
   },
   {
     id: 'bankarsko-pravo',
-    title: 'Bankarsko pravo',
-    shortDescription: 'Savetovanje u kreditnim, hipotekarnim i finansijskim odnosima.',
+    title: 'Банкарско право',
+    shortDescription: 'Саветовање у кредитним, хипотекарним и финансијским односима.',
     longDescription:
-      'Pružamo pravnu podršku u pregovorima sa bankama, strukturiranju finansiranja, hipotekarnim sporovima i usklađenosti sa propisima finansijskog sektora.',
+      'Пружамо правну подршку у преговорима са банкама, структурирању финансирања, хипотекарним споровима и усклађености са прописима финансијског сектора.',
     icon: Landmark,
   },
   {
     id: 'poresko-pravo',
-    title: 'Poresko pravo',
-    shortDescription: 'Poreska optimizacija i zastupanje u poreskim postupcima.',
+    title: 'Пореско право',
+    shortDescription: 'Пореска оптимизација и заступање у пореским поступцима.',
     longDescription:
-      'Analiziramo poresku poziciju klijenata, zastupamo u postupcima kontrole i po poreskim rešenjima, te savetujemo pri poreski osetljivim transakcijama.',
+      'Анализирамо пореску позицију клијената, заступамо у поступцима контроле и по пореским решењима, те саветујемо при порески осетљивим трансакцијама.',
     icon: Receipt,
   },
   {
     id: 'nekretnine',
-    title: 'Nekretnine',
-    shortDescription: 'Pravna sigurnost u prometu i upravljanju nepokretnostima.',
+    title: 'Некретнине',
+    shortDescription: 'Правна сигурност у промету и управљању непокретностима.',
     longDescription:
-      'Vodimo klijente kroz kupoprodaju, zakup, uknjižbu i due diligence nepokretnosti, štiteći interese i pre i posle zaključenja posla.',
+      'Водимо клијенте кроз купопродају, закуп, укњижбу и due diligence непокретности, штитећи интересе и пре и после закључења посла.',
     icon: Home,
   },
   {
     id: 'restitucija',
-    title: 'Restitucija',
-    shortDescription: 'Vraćanje oduzete imovine i naknada za nacionalizovanu imovinu.',
+    title: 'Реституција',
+    shortDescription: 'Враћање одузете имовине и накнада за национализовану имовину.',
     longDescription:
-      'Zastupamo bivše vlasnike i naslednike u postupcima vraćanja imovine, prikupljanju dokazne dokumentacije i pred Agencijom za restituciju.',
+      'Заступамо бивше власнике и наследнике у поступцима враћања имовине, прикупљању доказне документације и пред Агенцијом за реституцију.',
     icon: Undo2,
   },
   {
     id: 'upravni-postupci',
-    title: 'Upravni postupci',
-    shortDescription: 'Zastupanje pred organima uprave u prvostepenim postupcima.',
+    title: 'Управни поступци',
+    shortDescription: 'Заступање пред органима управе у првостепеним поступцима.',
     longDescription:
-      'Pripremamo podneske, žalbe i zastupamo klijente pred upravnim organima kako bi se odluke donosile u skladu sa zakonom i u razumnom roku.',
+      'Припремамо поднеске, жалбе и заступамо клијенте пред управним органима како би се одлуке доносиле у складу са законом и у разумном року.',
     icon: FileText,
   },
   {
     id: 'upravni-sporovi',
-    title: 'Upravni sporovi',
-    shortDescription: 'Osporavanje konačnih upravnih akata pred Upravnim sudom.',
+    title: 'Управни спорови',
+    shortDescription: 'Оспоравање коначних управних аката пред Управним судом.',
     longDescription:
-      'Pokrećemo i vodimo upravne sporove kada je upravni postupak iscrpljen, sa jasnom argumentacijom i fokusom na krajnji ishod za klijenta.',
+      'Покрећемо и водимо управне спорове када је управни поступак исцрпљен, са јасном аргументацијом и фокусом на крајњи исход за клијента.',
     icon: Gavel,
   },
   {
     id: 'radno-pravo',
-    title: 'Radno pravo',
-    shortDescription: 'Zaštita prava zaposlenih i podrška poslodavcima.',
+    title: 'Радно право',
+    shortDescription: 'Заштита права запослених и подршка послодавцима.',
     longDescription:
-      'Savetujemo u vezi sa zasnivanjem i prestankom radnog odnosa, disciplinskim postupcima, kolektivnim ugovorima i sporovima iz radnog odnosa.',
+      'Саветујемо у вези са заснивањем и престанком радног односа, дисциплинским поступцима, колективним уговорима и споровима из радног односа.',
     icon: Briefcase,
   },
   {
     id: 'ugovorno-pravo',
-    title: 'Ugovorno pravo',
-    shortDescription: 'Izrada i analiza ugovora koji štite vaše interese.',
+    title: 'Уговорно право',
+    shortDescription: 'Израда и анализа уговора који штите ваше интересе.',
     longDescription:
-      'Sastavljamo, pregledamo i pregovaramo ugovore svih vrsta, vodeći računa da svaka klauzula bude jasna, izvršiva i usklađena sa ciljevima klijenta.',
+      'Састављамо, прегледамо и преговарамо уговоре свих врста, водећи рачуна да свака клаузула буде јасна, извршива и усклађена са циљевима клијента.',
     icon: FileSignature,
   },
   {
     id: 'naknada-stete',
-    title: 'Naknada štete',
-    shortDescription: 'Ostvarivanje prava na materijalnu i nematerijalnu štetu.',
+    title: 'Накнада штете',
+    shortDescription: 'Остваривање права на материјалну и нематеријалну штету.',
     longDescription:
-      'Zastupamo oštećene u postupcima naknade štete nastale usled saobraćajnih nezgoda, povreda na radu i drugih štetnih događaja.',
+      'Заступамо оштећене у поступцима накнаде штете настале услед саобраћајних незгода, повреда на раду и других штетних догађаја.',
     icon: ShieldAlert,
   },
   {
     id: 'medijacija',
-    title: 'Medijacija',
-    shortDescription: 'Brzo i poverljivo rešavanje sporova van suda.',
+    title: 'Медијација',
+    shortDescription: 'Брзо и поверљиво решавање спорова ван суда.',
     longDescription:
-      'Vodimo klijente kroz postupak medijacije kao efikasnu alternativu sudskom postupku, uz očuvanje poslovnih i ličnih odnosa.',
+      'Водимо клијенте кроз поступак медијације као ефикасну алтернативу судском поступку, уз очување пословних и личних односа.',
     icon: Handshake,
   },
 ];
 
 export const values: ValueItem[] = [
   {
-    title: 'Integritet',
-    description: 'Svaki savet koji dajemo zasnovan je na struci, a ne na onome što je najlakše čuti.',
+    title: 'Интегритет',
+    description: 'Сваки савет који дајемо заснован је на струци, а не на ономе што је најлакше чути.',
   },
   {
-    title: 'Poverenje',
-    description: 'Dugoročni odnosi sa klijentima grade se na doslednosti i ispunjenim obećanjima.',
+    title: 'Поверење',
+    description: 'Дугорочни односи са клијентима граде се на доследности и испуњеним обећањима.',
   },
   {
-    title: 'Diskrecija',
-    description: 'Poverljivost podataka klijenata čuvamo kao osnovno pravilo naše struke.',
+    title: 'Дискреција',
+    description: 'Поверљивост података клијената чувамо као основно правило наше струке.',
   },
   {
-    title: 'Profesionalnost',
-    description: 'Precizna dokumentacija i jasna komunikacija u svakoj fazi predmeta.',
+    title: 'Професионалност',
+    description: 'Прецизна документација и јасна комуникација у свакој фази предмета.',
   },
   {
-    title: 'Efikasnost',
-    description: 'Poštujemo vreme klijenata i postupke vodimo bez nepotrebnog odlaganja.',
+    title: 'Ефикасност',
+    description: 'Поштујемо време клијената и поступке водимо без непотребног одлагања.',
   },
 ];
 
 export const differentiators: DifferentiatorItem[] = [
   {
-    title: 'Individualni pristup',
-    description: 'Svaki predmet dobija strategiju krojenu prema konkretnim okolnostima klijenta.',
+    title: 'Индивидуални приступ',
+    description: 'Сваки предмет добија стратегију кројену према конкретним околностима клијента.',
     icon: Users,
   },
   {
-    title: 'Strateško razmišljanje',
-    description: 'Sagledavamo predmet u celini, uključujući rizike i posledice koje nisu odmah očigledne.',
+    title: 'Стратешко размишљање',
+    description: 'Сагледавамо предмет у целини, укључујући ризике и последице које нису одмах очигледне.',
     icon: Brain,
   },
   {
-    title: 'Brza komunikacija',
-    description: 'Klijenti dobijaju odgovore u razumnom roku, bez čekanja i nejasnoća.',
+    title: 'Брза комуникација',
+    description: 'Клијенти добијају одговоре у разумном року, без чекања и нејасноћа.',
     icon: MessageSquare,
   },
   {
-    title: 'Pravna stručnost',
-    description: 'Višegodišnje iskustvo u složenim predmetima iz više grana prava.',
+    title: 'Правна стручност',
+    description: 'Вишегодишње искуство у сложеним предметима из више грана права.',
     icon: Scale,
   },
   {
-    title: 'Poverljivost',
-    description: 'Podaci i dokumentacija klijenata čuvaju se uz najviši nivo diskrecije.',
+    title: 'Поверљивост',
+    description: 'Подаци и документација клијената чувају се уз највиши ниво дискреције.',
     icon: Lock,
   },
   {
-    title: 'Dugoročna podrška',
-    description: 'Ostajemo dostupni klijentima i nakon okončanja predmeta, za svako naredno pitanje.',
+    title: 'Дугорочна подршка',
+    description: 'Остајемо доступни клијентима и након окончања предмета, за свако наредно питање.',
     icon: Clock,
   },
 ];
 
+
 export const processSteps: ProcessStep[] = [
   {
     number: '01',
-    title: 'Konsultacije',
-    description: 'Upoznajemo se sa vašim slučajem, saslušamo činjenice i postavljamo prva pravna pitanja.',
+    title: 'Консултације',
+    description: 'Упознајемо се са вашим случајем, саслушамо чињенице и постављамо прва правна питања.',
   },
   {
     number: '02',
-    title: 'Analiza predmeta',
-    description: 'Detaljno proučavamo dokumentaciju i procenjujemo pravnu poziciju i moguće ishode.',
+    title: 'Анализа предмета',
+    description: 'Детаљно проучавамо документацију и процењујемо правну позицију и могуће исходе.',
   },
   {
     number: '03',
-    title: 'Pravna strategija',
-    description: 'Definišemo jasan plan postupanja, uz rokove, rizike i predložene korake.',
-  },{
-  number: '04',
-  title: 'Zastupanje',
-  description: 'Zastupamo vaše interese pred sudovima, organima uprave ili u pregovorima.',
-},
-{
-  number: '05',
-  title: 'Rešenje',
-  description: 'Vodimo predmet do konačnog ishoda i informišemo vas o svakom narednom koraku.',
-},
+    title: 'Правна стратегија',
+    description: 'Дефинишемо јасан план поступања, уз рокове, ризике и предложене кораке.',
+  },
+  {
+    number: '04',
+    title: 'Заступање',
+    description: 'Заступамо ваше интересе пред судовима, органима управе или у преговорима.',
+  },
+  {
+    number: '05',
+    title: 'Решење',
+    description: 'Водимо предмет до коначног исхода и информишемо вас о сваком наредном кораку.',
+  },
 ];
 
 export const testimonials: Testimonial[] = [
   {
     id: 't1',
-    name: 'Klijent',
-    role: 'Pravna usluga',
-    quote: 'Profesionalna pravna pomoć i odlična komunikacija tokom celog postupka.',
+    name: 'Клијент',
+    role: 'Правна услуга',
+    quote: 'Професионална правна помоћ и одлична комуникација током целог поступка.',
     rating: 5,
   },
 ];
@@ -223,195 +196,257 @@ export const testimonials: Testimonial[] = [
 export const blogPosts: BlogPost[] = [
   {
     id: 'b1',
-    category: 'Nekretnine',
-    title: 'Šta proveriti pre kupovine nepokretnosti u Srbiji',
+    category: 'Некретнине',
+    title: 'Шта проверити пре куповине непокретности у Србији',
     excerpt:
-      'Pregled ključnih koraka pravne provere nepokretnosti — od uvida u list nepokretnosti do tereta koji nisu odmah vidljivi.',
-    date: '12. septembar 2026.',
-    readTime: '6 min čitanja',
+      'Преглед кључних корака правне провере непокретности — од увида у лист непокретности до терета који нису одмах видљиви.',
+    date: '12. септембар 2026.',
+    readTime: '6 мин читања',
     featured: true,
-image: '/blog/slika7.png',
-content: `
-Kupovina nepokretnosti zahteva detaljnu pravnu proveru.
+    image: '/blog/slika7.png',
+    content: `
+Куповина непокретности захтева детаљну правну проверу.
 
-Pre svega potrebno je izvršiti uvid u list nepokretnosti kako bi se utvrdilo vlasništvo.
+Пре свега потребно је извршити увид у лист непокретности како би се утврдило власништво.
 
-Takođe treba proveriti da li postoje hipoteke, zabeležbe sporova ili druga ograničenja.
+Такође треба проверити да ли постоје хипотеке, забележбе спорова или друга ограничења.
 
-Pravna analiza dokumentacije može sprečiti ozbiljne probleme nakon kupovine.
+Правна анализа документације може спречити озбиљне проблеме након куповине.
 
-Angažovanje advokata pre zaključenja ugovora značajno smanjuje rizik.
+Ангажовање адвоката пре закључења уговора значајно смањује ризик.
 `,
   },
   {
     id: 'b2',
-    category: 'Privredno pravo',
-    title: 'Statusne promene privrednih društava: na šta obratiti pažnju',
+    category: 'Привредно право',
+    title: 'Статусне промене привредних друштава: на шта обратити пажњу',
     excerpt:
-      'Spajanje, podela i promena pravne forme nose specifične rizike — objašnjavamo kako se pravovremeno pripremiti.',
-    date: '28. avgust 2026.',
-    readTime: '5 min čitanja',
-image: '/blog/slika2.png',
-content: `
-Statusne promene privrednih društava predstavljaju složene pravne postupke koji mogu značajno uticati na poslovanje kompanije.
+      'Спајање, подела и промена правне форме носе специфичне ризике — објашњавамо како се правовремено припремити.',
+    date: '28. август 2026.',
+    readTime: '5 мин читања',
+    image: '/blog/slika2.png',
+    content: `
+Статусне промене привредних друштава представљају сложене правне поступке који могу значајно утицати на пословање компаније.
 
-Najčešće statusne promene uključuju spajanje, pripajanje, podelu i promenu pravne forme društva.
+Најчешће статусне промене укључују спајање, припајање, поделу и промену правне форме друштва.
 
-Pre sprovođenja promene potrebno je analizirati poreske posledice, status zaposlenih, postojeće ugovore i eventualne obaveze prema poveriocima.
+Пре спровођења промене потребно је анализирати пореске последице, статус запослених, постојеће уговоре и евентуалне обавезе према повериоцима.
 
-Posebno je važno obezbediti urednu korporativnu dokumentaciju i blagovremeno obavestiti sve zainteresovane strane.
+Посебно је важно обезбедити уредну корпоративну документацију и благовремено обавестити све заинтересоване стране.
 
-Stručna pravna podrška omogućava da se postupak sprovede efikasno i u skladu sa zakonom, uz minimiziranje poslovnih rizika.
+Стручна правна подршка омогућава да се поступак спроведе ефикасно и у складу са законом, уз минимизирање пословних ризика.
 `
   },
   {
     id: 'b3',
-    category: 'Radno pravo',
-    title: 'Otkaz ugovora o radu: prava zaposlenog i obaveze poslodavca',
+    category: 'Радно право',
+    title: 'Отказ уговора о раду: права запосленог и обавезе послодавца',
     excerpt:
-      'Koji su zakonski uslovi za zakonit otkaz i koje korake zaposleni može preduzeti ukoliko smatra da su mu prava povređena.',
-    date: '14. avgust 2026.',
-    readTime: '7 min čitanja',
-image: '/blog/slika3.png',
-content: `
-Prestanak radnog odnosa mora biti sproveden u skladu sa Zakonom o radu kako bi bio zakonit.
+      'Који су законски услови за законит отказ и које кораке запослени може предузети уколико сматра да су му права повређена.',
+    date: '14. август 2026.',
+    readTime: '7 мин читања',
+    image: '/blog/slika3.png',
+    content: `
+Престанак радног односа мора бити спроведен у складу са Законом о раду како би био законит.
 
-Poslodavac je dužan da poštuje propisanu proceduru i da zaposlenom omogući ostvarivanje svih zakonom garantovanih prava.
+Послодавац је дужан да поштује прописану процедуру и да запосленом омогући остваривање свих законом гарантованих права.
 
-U zavisnosti od razloga za otkaz, mogu postojati obaveze upozorenja zaposlenog, vođenja disciplinskog postupka ili isplate određenih naknada.
+У зависности од разлога за отказ, могу постојати обавезе упозорења запосленог, вођења дисциплинског поступка или исплате одређених накнада.
 
-Zaposleni koji smatra da je otkaz nezakonit može pokrenuti odgovarajući sudski postupak radi zaštite svojih prava.
+Запослени који сматра да је отказ незаконит може покренути одговарајући судски поступак ради заштите својих права.
 
-Pravovremeni pravni savet može značajno doprineti pravilnom rešavanju spora između zaposlenog i poslodavca.
+Правовремени правни савет може значајно допринети правилном решавању спора између запосленог и послодавца.
 `
+  },
+    export const blogPosts: BlogPost[] = [
+  {
+    id: 'b1',
+    category: 'Некретнине',
+    title: 'Шта проверити пре куповине непокретности у Србији',
+    excerpt:
+      'Преглед кључних корака правне провере непокретности — од увида у лист непокретности до терета који нису одмах видљиви.',
+    date: '12. септембар 2026.',
+    readTime: '6 мин читања',
+    featured: true,
+    image: '/blog/slika7.png',
+    content: `
+Куповина непокретности захтева детаљну правну проверу.
+
+Пре свега потребно је извршити увид у лист непокретности како би се утврдило власништво.
+
+Такође треба проверити да ли постоје хипотеке, забележбе спорова или друга ограничења.
+
+Правна анализа документације може спречити озбиљне проблеме након куповине.
+
+Ангажовање адвоката пре закључења уговора значајно смањује ризик.
+`,
+  },
+  {
+    id: 'b2',
+    category: 'Привредно право',
+    title: 'Статусне промене привредних друштава: на шта обратити пажњу',
+    excerpt:
+      'Спајање, подела и промена правне форме носе специфичне ризике — објашњавамо како се правовремено припремити.',
+    date: '28. август 2026.',
+    readTime: '5 мин читања',
+    image: '/blog/slika2.png',
+    content: `
+Статусне промене привредних друштава представљају сложене правне поступке који могу значајно утицати на пословање компаније.
+
+Најчешће статусне промене укључују спајање, припајање, поделу и промену правне форме друштва.
+
+Пре спровођења промене потребно је анализирати пореске последице, статус запослених, постојеће уговоре и евентуалне обавезе према повериоцима.
+
+Посебно је важно обезбедити уредну корпоративну документацију и благовремено обавестити све заинтересоване стране.
+
+Стручна правна подршка омогућава да се поступак спроведе ефикасно и у складу са законом, уз минимизирање пословних ризика.
+`,
+  },
+  {
+    id: 'b3',
+    category: 'Радно право',
+    title: 'Отказ уговора о раду: права запосленог и обавезе послодавца',
+    excerpt:
+      'Који су законски услови за законит отказ и које кораке запослени може предузети уколико сматра да су му права повређена.',
+    date: '14. август 2026.',
+    readTime: '7 мин читања',
+    image: '/blog/slika3.png',
+    content: `
+Престанак радног односа мора бити спроведен у складу са Законом о раду како би био законит.
+
+Послодавац је дужан да поштује прописану процедуру и да запосленом омогући остваривање свих законом гарантованих права.
+
+У зависности од разлога за отказ, могу постојати обавезе упозорења запосленог, вођења дисциплинског поступка или исплате одређених накнада.
+
+Запослени који сматра да је отказ незаконит може покренути одговарајући судски поступак ради заштите својих права.
+
+Правовремени правни савет може значајно допринети правилном решавању спора између запосленог и послодавца.
+`,
   },
   {
     id: 'b4',
-    category: 'Restitucija',
-    title: 'Postupak restitucije: dokumentacija koja ubrzava rešavanje',
+    category: 'Реституција',
+    title: 'Поступак реституције: документација која убрзава решавање',
     excerpt:
-      'Koja dokumenta najčešće nedostaju podnosiocima zahteva i kako pravovremeno prikupljanje dokaza skraćuje postupak.',
-    date: '30. jul 2026.',
-    readTime: '5 min čitanja',
-image: '/blog/slika5.png',
-content: `
-Postupci restitucije često zahtevaju obimnu dokumentaciju i pažljivo prikupljanje dokaza.
+      'Која документа најчешће недостају подносиоцима захтева и како правовремено прикупљање доказа скраћује поступак.',
+    date: '30. јул 2026.',
+    readTime: '5 мин читања',
+    image: '/blog/slika5.png',
+    content: `
+Поступци реституције често захтевају обимну документацију и пажљиво прикупљање доказа.
 
-Podnosioci zahteva neretko nailaze na poteškoće zbog nedostajućih istorijskih dokumenata, neusklađenih podataka ili nepotpune arhivske građe.
+Подносиоци захтева неретко наилазе на потешкоће због недостајућих историјских докумената, неусклађених података или непотпуне архивске грађе.
 
-Važno je pribaviti sve raspoložive dokaze koji potvrđuju pravo svojine prethodnih vlasnika, kao i okolnosti pod kojima je imovina oduzeta.
+Важно је прибавити све расположиве доказе који потврђују право својине претходних власника, као и околности под којима је имовина одузета.
 
-Pravilno pripremljena dokumentacija može značajno ubrzati postupak i smanjiti mogućnost dodatnih zahteva od strane nadležnih organa.
+Правилно припремљена документација може значајно убрзати поступак и смањити могућност додатних захтева од стране надлежних органа.
 
-Stručna pravna pomoć olakšava snalaženje kroz složene administrativne procedure i povećava izglede za uspešno ostvarivanje prava.
-`
-
+Стручна правна помоћ олакшава сналажење кроз сложене административне процедуре и повећава изгледе за успешно остваривање права.
+`,
   },
   {
     id: 'b5',
-    category: 'Naknada štete',
-    title: 'Naknada nematerijalne štete posle saobraćajne nezgode',
+    category: 'Накнада штете',
+    title: 'Накнада нематеријалне штете после саобраћајне незгоде',
     excerpt:
-      'Kako se utvrđuje visina naknade za pretrpljeni strah, bol i umanjenje životne aktivnosti, i koji dokazi su presudni.',
-    date: '9. jul 2026.',
-    readTime: '6 min čitanja',
-image: '/blog/slika1.png',
-content: `
-Nakon saobraćajne nezgode oštećeno lice može imati pravo na naknadu materijalne i nematerijalne štete.
+      'Како се утврђује висина накнаде за претрпљени страх, бол и умањење животне активности, и који докази су пресудни.',
+    date: '9. јул 2026.',
+    readTime: '6 мин читања',
+    image: '/blog/slika1.png',
+    content: `
+Након саобраћајне незгоде оштећено лице може имати право на накнаду материјалне и нематеријалне штете.
 
-Nematerijalna šteta obuhvata fizičke bolove, pretrpljeni strah, umanjenje životne aktivnosti i druge posledice koje utiču na kvalitet života.
+Нематеријална штета обухвата физичке болове, претрпљени страх, умањење животне активности и друге последице које утичу на квалитет живота.
 
-Visina naknade određuje se na osnovu medicinske dokumentacije, veštačenja i okolnosti konkretnog slučaja.
+Висина накнаде одређује се на основу медицинске документације, вештачења и околности конкретног случаја.
 
-Prikupljanje dokaza odmah nakon nezgode od ključnog je značaja za uspešno ostvarivanje zahteva.
+Прикупљање доказа одмах након незгоде од кључног је значаја за успешно остваривање захтева.
 
-Pravna podrška može pomoći u pregovorima sa osiguravajućim društvom i zaštiti interesa oštećenog lica.
-`
-
+Правна подршка може помоћи у преговорима са осигуравајућим друштвом и заштити интереса оштећеног лица.
+`,
   },
   {
     id: 'b6',
-    category: 'Medijacija',
-    title: 'Kada je medijacija bolji izbor od sudskog postupka',
+    category: 'Медијација',
+    title: 'Када је медијација бољи избор од судског поступка',
     excerpt:
-      'Prednosti medijacije u poslovnim i porodičnim sporovima — brzina, poverljivost i očuvanje odnosa strana.',
-    date: '22. jun 2026.',
-    readTime: '4 min čitanja',
-image: '/blog/slika6.png',
-content: `
-Medijacija predstavlja alternativni način rešavanja sporova koji omogućava stranama da postignu sporazum bez dugotrajnog sudskog postupka.
+      'Предности медијације у пословним и породичним споровима — брзина, поверљивост и очување односа страна.',
+    date: '22. јун 2026.',
+    readTime: '4 мин читања',
+    image: '/blog/slika6.png',
+    content: `
+Медијација представља алтернативни начин решавања спорова који омогућава странама да постигну споразум без дуготрајног судског поступка.
 
-Postupak vodi neutralni posrednik koji pomaže učesnicima da pronađu obostrano prihvatljivo rešenje.
+Поступак води неутрални посредник који помаже учесницима да пронађу обострано прихватљиво решење.
 
-Prednosti medijacije uključuju brže rešavanje sporova, niže troškove i veću poverljivost u odnosu na klasičan sudski postupak.
+Предности медијације укључују брже решавање спорова, ниже трошкове и већу поверљивост у односу на класичан судски поступак.
 
-Ovaj model se često koristi u poslovnim, porodičnim i imovinskim sporovima gde je važno očuvati odnose između strana.
+Овај модел се често користи у пословним, породичним и имовинским споровима где је важно очувати односе између страна.
 
-U mnogim slučajevima medijacija omogućava efikasnije i praktičnije rešenje nego dugotrajna sudska procedura.
-`
-
+У многим случајевима медијација омогућава ефикасније и практичније решење него дуготрајна судска процедура.
+`,
   },
 ];
 
 export const faqItems: FAQItem[] = [
   {
     id: 'f1',
-    question: 'Kako zakazati prve konsultacije?',
+    question: 'Како заказати прве консултације?',
     answer:
-      'Konsultacije možete zakazati putem kontakt forme na sajtu, telefonom ili imejlom. Odgovaramo u toku istog radnog dana i dogovaramo termin koji vam odgovara.',
+      'Консултације можете заказати путем контакт форме на сајту, телефоном или имејлом. Одговарамо у току истог радног дана и договарамо термин који вам одговара.',
   },
   {
     id: 'f2',
-    question: 'Da li nudite besplatne prve konsultacije?',
+    question: 'Да ли нудите бесплатне прве консултације?',
     answer:
-      'Uvodni razgovor u kom procenjujemo prirodu vašeg predmeta je bez obaveze. Detaljna analiza i dalje zastupanje naplaćuju se prema jasno definisanom cenovniku.',
+      'Уводни разговор у ком процењујемо природу вашег предмета је без обавезе. Детаљна анализа и даље заступање наплаћују се према јасно дефинисаном ценовнику.',
   },
   {
     id: 'f3',
-    question: 'Koliko traje rešavanje pravnog predmeta?',
+    question: 'Колико траје решавање правног предмета?',
     answer:
-      'Trajanje zavisi od vrste postupka, opterećenosti nadležnog organa i složenosti dokaznog postupka. Nakon analize predmeta dajemo realnu procenu rokova.',
+      'Трајање зависи од врсте поступка, оптерећености надлежног органа и сложености доказног поступка. Након анализе предмета дајемо реалну процену рокова.',
   },
   {
     id: 'f4',
-    question: 'Da li zastupate klijente van Novog Sada?',
+    question: 'Да ли заступате клијенте ван Новог Сада?',
     answer:
-      'Da, zastupamo fizička i pravna lica širom Srbije, uz mogućnost onlajn konsultacija i komunikacije tokom celog trajanja postupka.',
+      'Да, заступамо физичка и правна лица широм Србије, уз могућност онлајн консултација и комуникације током целог трајања поступка.',
   },
   {
     id: 'f5',
-    question: 'Kako se formira cena pravnih usluga?',
+    question: 'Како се формира цена правних услуга?',
     answer:
-      'Cena zavisi od vrste predmeta, procenjenog obima rada i hitnosti. Pre preuzimanja predmeta uvek dostavljamo jasnu i pismenu ponudu.',
+      'Цена зависи од врсте предмета, процењеног обима рада и хитности. Пре преузимања предмета увек достављамо јасну и писмену понуду.',
   },
   {
     id: 'f6',
-    question: 'Da li čuvate poverljivost podataka klijenata?',
+    question: 'Да ли чувате поверљивост података клијената?',
     answer:
-      'Poverljivost je osnovno profesionalno i etičko pravilo advokature. Svi podaci i dokumentacija klijenata čuvaju se uz strogu diskreciju.',
+      'Поверљивост је основно професионално и етичко правило адвокатуре. Сви подаци и документација клијената чувају се уз строгу дискрецију.',
   },
 ];
 
 export const stats = [
-  { value: 1000, suffix: '+', label: 'Uspešno završenih predmeta' },
-  { value: 10, suffix: '+', label: 'Godina iskustva' },
-  { value: 500, suffix: '+', label: 'Zadovoljnih klijenata' },
+  { value: 1000, suffix: '+', label: 'Успешно завршених предмета' },
+  { value: 10, suffix: '+', label: 'Година искуства' },
+  { value: 500, suffix: '+', label: 'Задовољних клијената' },
 ];
 
 export const contactInfo = {
   address: 'Футошка бр. 1А, Нови Сад, Србија',
   phone: '063 40 11 04 / 021 382 40 48',
   email: 'advokatskakancelarijavsavic@gmail.com',
-  workingHours: 'Ponedeljak – petak: 08:00 – 16:00',
+  workingHours: 'Понедељак – петак: 08:00 – 16:00',
 };
 
 export const navLinks = [
-  { href: '#about', label: 'O nama' },
-  { href: '#practice-areas', label: 'Oblasti prava' },
-  { href: '#why-us', label: 'Zašto mi' },
-  { href: '#process', label: 'Proces' },
-  { href: '#testimonials', label: 'Iskustva' },
-  { href: '#blog', label: 'Pravni saveti' },
-  { href: '#faq', label: 'Pitanja' },
-  { href: '#contact', label: 'Kontakt' },
+  { href: '#about', label: 'О нама' },
+  { href: '#practice-areas', label: 'Области права' },
+  { href: '#why-us', label: 'Зашто ми' },
+  { href: '#process', label: 'Процес' },
+  { href: '#testimonials', label: 'Искуства' },
+  { href: '#blog', label: 'Правни савети' },
+  { href: '#faq', label: 'Питања' },
+  { href: '#contact', label: 'Контакт' },
 ];
