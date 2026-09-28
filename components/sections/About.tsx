@@ -1,0 +1,104 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Scale } from 'lucide-react';
+import { RevealText } from '@/components/ui/RevealText';
+import { values } from '@/lib/data';
+
+const milestones = [
+  { label: 'Osnivanje kancelarije', description: 'Kancelarija počinje sa radom uz jasnu posvećenost struci.' },
+  { label: 'Prvih 100 rešenih predmeta', description: 'Izgrađen je poverljiv odnos sa prvim generacijama klijenata.' },
+  { label: 'Proširenje tima', description: 'Specijalizacija za privredno, bankarsko i radno pravo.' },
+  { label: 'Preko 1000 predmeta', description: 'Kontinuitet poverenja klijenata iz cele Srbije.' },
+];
+
+export function About() {
+  return (
+    <section id="about" className="bg-paper py-28 dark:bg-ink sm:py-36">
+      <div className="container-luxury grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
+        <div className="order-2 lg:order-1">
+          <span className="eyebrow-rule text-xs uppercase tracking-[0.25em] text-gold-700 dark:text-gold-300">
+            O nama
+          </span>
+          <RevealText
+            as="h2"
+            text="Advokatura koja se meri rezultatima, ne obećanjima."
+            className="mt-6 max-w-lg font-display text-3xl leading-[1.15] text-primary balance dark:text-paper sm:text-4xl"
+          />
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-6 max-w-lg text-base leading-relaxed text-primary/65 dark:text-paper/65"
+          >
+            Više od jedne decenije gradimo poverenje kroz predane predmete i preciznu pravnu argumentaciju. Naš tim
+            spaja teorijsko znanje sa praktičnim iskustvom, kako bi svaki klijent dobio strategiju koja odgovara
+            njegovoj konkretnoj situaciji.
+          </motion.p>
+
+          <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {values.map((value, i) => (
+              <motion.li
+                key={value.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                className="border-l-2 border-gold/40 pl-4"
+              >
+                <h3 className="font-display text-lg text-primary dark:text-paper">{value.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-primary/55 dark:text-paper/55">
+                  {value.description}
+                </p>
+              </motion.li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="order-1 flex flex-col gap-10 lg:order-2">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            className="relative aspect-[4/5] overflow-hidden rounded-sm bg-ink-gradient shadow-deep"
+          >
+            <div
+              className="absolute inset-0 opacity-40"
+              style={{
+                backgroundImage:
+                  'radial-gradient(circle at 30% 20%, rgba(201,162,39,0.35), transparent 55%)',
+              }}
+            />
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-paper/70">
+              <Scale size={40} strokeWidth={1} className="text-gold-300" />
+              <span className="font-display text-sm tracking-[0.2em] text-paper/50">PORTRET ADVOKATA</span>
+            </div>
+            <div className="absolute inset-6 border border-paper/10" />
+          </motion.div>
+
+          <div className="relative pl-8">
+            <div className="absolute left-[3px] top-2 h-[calc(100%-1rem)] w-px bg-primary/10 dark:bg-paper/10" />
+            <ol className="space-y-8">
+              {milestones.map((m, i) => (
+                <motion.li
+                  key={m.label}
+                  initial={{ opacity: 0, x: -12 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: i * 0.12 }}
+                  className="relative"
+                >
+                  <span className="absolute -left-8 top-1.5 h-2 w-2 rounded-full bg-gold" />
+                  <h4 className="font-display text-base text-primary dark:text-paper">{m.label}</h4>
+                  <p className="mt-1 text-sm text-primary/55 dark:text-paper/55">{m.description}</p>
+                </motion.li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

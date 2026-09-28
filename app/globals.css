@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  scroll-behavior: auto;
+}
+
+html {
+  background-color: #ffffff;
+}
+
+html.dark {
+  background-color: #08111f;
+}
+
+body {
+  @apply bg-paper text-primary font-body antialiased;
+  font-feature-settings: 'ss01' on, 'ss02' on;
+}
+
+::selection {
+  background-color: #c9a227;
+  color: #08111f;
+}
+
+/* Slim luxury scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9a227;
+  border-radius: 999px;
+  border: 2px solid #ffffff;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  border-color: #08111f;
+}
+
+/* Visible, elegant keyboard focus */
+:focus-visible {
+  outline: 2px solid #c9a227;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.balance {
+  text-wrap: balance;
+}
+
+@layer utilities {
+  .container-luxury {
+    @apply mx-auto w-full max-w-content px-6 sm:px-10 lg:px-16;
+  }
+
+  .eyebrow-rule {
+    @apply inline-flex items-center gap-3 text-gold-600;
+  }
+
+  .eyebrow-rule::before {
+    content: '';
+    @apply h-px w-8 bg-gold;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
