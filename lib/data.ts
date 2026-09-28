@@ -1,3 +1,32 @@
+import {
+  Scale,
+  Building2,
+  Landmark,
+  Receipt,
+  Home,
+  Undo2,
+  FileText,
+  Gavel,
+  Briefcase,
+  FileSignature,
+  ShieldAlert,
+  Handshake,
+  Users,
+  Lock,
+  Clock,
+  Brain,
+  MessageSquare,
+} from 'lucide-react';
+
+import type {
+  PracticeArea,
+  Testimonial,
+  BlogPost,
+  FAQItem,
+  ProcessStep,
+  ValueItem,
+  DifferentiatorItem,
+} from '@/types';
 export const practiceAreas: PracticeArea[] = [
   {
     id: 'gradjansko-pravo',
@@ -257,8 +286,7 @@ export const blogPosts: BlogPost[] = [
 
 Правовремени правни савет може значајно допринети правилном решавању спора између запосленог и послодавца.
 `
-   
-  },
+    },
   {
     id: 'b4',
     category: 'Реституција',
