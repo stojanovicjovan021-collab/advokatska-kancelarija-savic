@@ -405,12 +405,12 @@ export const contactInfo = {
 };
 
 export const navLinks = [
-  { href: '#about', label: 'О нама' },
-  { href: '#practice-areas', label: 'Области права' },
-  { href: '#why-us', label: 'Зашто ми' },
-  { href: '#process', label: 'Процес' },
-  { href: '#testimonials', label: 'Искуства' },
-  { href: '#blog', label: 'Правни савети' },
-  { href: '#faq', label: 'Питања' },
-  { href: '#contact', label: 'Контакт' },
+  { href: '/#about', label: 'О нама' },
+  { href: '/#practice-areas', label: 'Области права' },
+  { href: '/#why-us', label: 'Зашто ми' },
+  { href: '/#process', label: 'Процес' },
+  { href: '/#testimonials', label: 'Искуства' },
+  { href: '/#blog', label: 'Правни савети' },
+  { href: '/#faq', label: 'Питања' },
+  { href: '/#contact', label: 'Контакт' },
 ];
