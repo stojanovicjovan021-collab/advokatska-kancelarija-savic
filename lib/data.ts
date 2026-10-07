@@ -412,5 +412,6 @@ export const navLinks = [
   { href: '/#testimonials', label: 'Искуства' },
   { href: '/#blog', label: 'Правни савети' },
   { href: '/#faq', label: 'Питања' },
+  { href: '/#career', label: 'Каријера' },
   { href: '/#contact', label: 'Контакт' },
 ];
