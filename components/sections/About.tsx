@@ -23,7 +23,7 @@ export function About() {
 
           <RevealText
             as="h2"
-            text="Адвокатура која се мери резултатима, не обећањима."
+            text="О Адвокатској канцеларији Савић"
             className="mt-6 max-w-lg font-display text-3xl leading-[1.15] text-primary balance dark:text-paper sm:text-4xl"
           />
 
