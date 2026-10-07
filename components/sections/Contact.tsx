@@ -190,19 +190,29 @@ export function Contact() {
                 </span>
               </li>
 
-              <li className="flex items-start gap-4">
-                <Phone
-                  size={20}
-                  className="mt-0.5 shrink-0 text-gold-300"
-                  strokeWidth={1.5}
-                />
-                <a
-                  href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
-                  className="text-sm text-paper/70 hover:text-gold-200"
-                >
-                  {contactInfo.phone}
-                </a>
-              </li>
+             <li className="flex items-start gap-4">
+  <Phone
+    size={20}
+    className="mt-0.5 shrink-0 text-gold-300"
+    strokeWidth={1.5}
+  />
+
+  <div className="flex flex-col">
+    <a
+      href="tel:+38163401104"
+      className="text-sm text-paper/70 hover:text-gold-200"
+    >
+      063 40 11 04
+    </a>
+
+    <a
+      href="tel:+381213824048"
+      className="text-sm text-paper/70 hover:text-gold-200"
+    >
+      021 382 40 48
+    </a>
+  </div>
+</li>
 
               <li className="flex items-start gap-4">
                 <Mail
