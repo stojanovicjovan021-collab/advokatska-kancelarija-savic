@@ -402,6 +402,7 @@ export const contactInfo = {
 Нови Сад 21000`,
   phone: '063 40 11 04 / 021 382 40 48',
   email: 'advokatskakancelarijavsavic@gmail.com',
+  mapAddress: 'Futoska 1A Novi Sad Serbia',
   workingHours: 'Понедељак – петак: 08:00 – 16:00',
 };
 
