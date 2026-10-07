@@ -50,7 +50,7 @@ export function Contact() {
     }, 1200);
   }
 
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(contactInfo.address)}&output=embed`;
+  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(contactInfo.mapAddress)}&output=embed`;
 
   return (
     <section id="contact" className="bg-ink py-28 text-paper sm:py-36">
