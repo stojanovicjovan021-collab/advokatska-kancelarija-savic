@@ -60,12 +60,14 @@ export function Footer() {
         <div className="container-luxury flex flex-col items-center justify-between gap-4 py-8 text-xs text-paper/40 sm:flex-row">
           <p>© {year} Адвокатска канцеларија. Сва права задржана.</p>
           <div className="flex gap-6">
-            <a href="#" className="transition-colors hover:text-gold-200">
-              Политика приватности
-            </a>
-            <a href="#" className="transition-colors hover:text-gold-200">
-              Услови коришћења
-            </a>
+  <a href="/privacy" className="transition-colors hover:text-gold-200">
+    Политика приватности
+  </a>
+
+  <a href="/terms" className="transition-colors hover:text-gold-200">
+    Општи услови пословања
+  </a>
+</div>
           </div>
         </div>
       </div>
