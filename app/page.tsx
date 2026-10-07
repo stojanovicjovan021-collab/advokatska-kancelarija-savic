@@ -6,6 +6,7 @@ import { Process } from '@/components/sections/Process';
 import { Testimonials } from '@/components/sections/Testimonials';
 import { Blog } from '@/components/sections/Blog';
 import { FAQ } from '@/components/sections/FAQ';
+import { Career } from '@/components/sections/Career';
 import { Contact } from '@/components/sections/Contact';
 
 export default function HomePage() {
@@ -19,6 +20,7 @@ export default function HomePage() {
       <Testimonials />
       <Blog />
       <FAQ />
+      <Career />
       <Contact />
     </>
   );
